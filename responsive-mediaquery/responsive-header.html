@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VSS | Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+      }
+      header {
+        box-shadow: 1px 1px 1px 1px silver;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px;
+      }
+
+      .nav-menu {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .nav-menu li {
+        list-style-type: none;
+        font-size: 14px;
+      }
+
+      .header-logo {
+        background-color: beige;
+        border-radius: 50%;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        padding: 12px;
+      }
+
+      .header-nav-list {
+        display: none;
+      }
+
+      .header-hamburger-menu {
+        background-color: beige;
+        border-radius: 50%;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        padding: 12px;
+      }
+
+      @media screen and (min-width: 769px) {
+        .header-nav-list {
+          display: block;
+        }
+
+        .header-hamburger-menu {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-logo">
+        <span>IC</span>
+      </div>
+      <nav class="header-nav-list">
+        <ul class="nav-menu">
+          <li class="nav-item">Home</li>
+          <li class="nav-item">Curriculam</li>
+          <li class="nav-item">Faq</li>
+          <li class="nav-item">About Us</li>
+          <li class="nav-item">Contact Us</li>
+          <li class="nav-item">Blogs</li>
+          <li class="nav-item"><button>Apply to Cohort 9</button></li>
+          <li class="nav-item"><button>Hire from us</button></li>
+        </ul>
+      </nav>
+      <div class="header-hamburger-menu">IC</div>
+    </header>
+  </body>
+</html>

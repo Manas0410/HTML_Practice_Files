@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // Swiggy crosschecking with Payment gateway
+  const swiggyValidatingTransaction = (data) => {
+    return new Promise((resolve, reject) => {
+      if (data.paymentSuccess) {
+        resolve(true);
+      } else {
+        resolve(false);
+      }
+    });
+  };
+
+  // Swiggy asking restro to make an order
+  const swiggyInformingRestroToPlaceAnOrder = (data) => {
+    return new Promise((resolve, reject) => {
+      if (data.orderId) {
+        resolve(true);
+      } else {
+        reject(false);
+      }
+    });
+  };
+
+  // Swiggy asking restro to make an order
+  const swiggyIsInformingYouToProceesTheOrder = (data) => {
+    return new Promise((resolve, reject) => {
+      if (data.isOrderConfirmed) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+  };
+
+  const notifyingBackToSwiggy = async (data) => {
+    const paymentData = { paymentSuccess: true };
+    const transaction = await swiggyValidatingTransaction(paymentData);
+
+    const orderDetails = { orderId: 1234 };
+    const informRestro = await swiggyInformingRestroToPlaceAnOrder(
+      orderDetails
+    );
+
+    const orderInfo = { isOrderConfirmed: true };
+    const informTheUser = await swiggyIsInformingYouToProceesTheOrder(
+      orderInfo
+    );
+  };
+</script>

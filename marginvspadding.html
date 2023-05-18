@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Margin</title>
+    <style>
+      .m-container {
+        background-color: blue;
+        margin: 12px;
+      }
+
+      .p-container {
+        background-color: blue;
+        padding: 12px;
+      }
+
+      .m-parent {
+        background-color: blueviolet;
+        margin: 12px;
+      }
+      .p-parent {
+        background-color: blueviolet;
+        padding: 12px;
+      }
+
+      .m-children {
+        margin: 12px;
+        background-color: yellowgreen;
+      }
+
+      .p-children {
+        padding: 12px;
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="m-container">
+      <div class="m-parent">
+        <div class="m-children">
+          <p>Hello from Margin</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-container">
+      <div class="p-parent">
+        <div class="p-children">
+          <p>Hello from Padding</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

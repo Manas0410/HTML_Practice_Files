@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header">
+      <input type="text" id="label" placeholder="enter label" />
+      <input type="text" id="placeholder" placeholder="enter placeholder" />
+      <select name="" id="select-opt">
+        <option value="">select input type</option>
+        <option value="text">Textbox</option>
+        <option value="date">date</option>
+        <option value="password">password</option>
+        <option value="email">email</option>
+      </select>
+      <input type="button" value="add" id="button" onclick="addFunc()" />
+    </div>
+    <div id="output"></div>
+  </body>
+</html>
+<script>
+  function addFunc() {
+    const labelElem = document.getElementById("label");
+    const labelvalue = labelElem.value;
+    const placeholderElem = document.getElementById("placeholder");
+    const placeholdervalue = placeholderElem.value;
+    const slectElem = document.getElementById("select-opt");
+    const selectelemvalue = slectElem.value;
+    const outputElem = document.getElementById("output");
+
+    const name = document.createElement("span");
+    name.innerText = labelvalue;
+
+    const inputField = document.createElement("input");
+    inputField.type = selectelemvalue;
+    inputField.placeholder = placeholdervalue;
+
+    outputElem.appendChild(name);
+    outputElem.appendChild(inputField);
+
+    labelElem.value = "";
+    placeholderElem.value = "";
+    slectElem.value = "";
+  }
+</script>

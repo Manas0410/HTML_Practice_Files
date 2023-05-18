@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  // Create
+  const profile = {
+    name: "Arun",
+    city: "Pune",
+    details: {
+      phone: 99,
+      isActive: true,
+    },
+    1: "Vishal",
+    1000: "Rahul",
+    $u: "Amit",
+  };
+
+  // Read
+  console.log(profile.name); // "Arun"
+  console.log(profile["name"]); // "Arun"
+  console.log(profile.details.phone); // 99
+  console.log(profile["details"]["phone"]); // 99
+  console.log(profile.details.country); // undefined
+  console.log(Object.keys(profile));
+
+  // Update
+  profile.name = "Anurima";
+  profile.city = "Pune";
+  profile["name"] = "Nikhil";
+  profile.yeKeyNahihai = "Yes";
+
+  console.log(profile.name);
+  console.profile.city;
+
+  // Delete
+  delete profile.name;
+  delete profile["city"];
+
+  console.log(profile);
+</script>

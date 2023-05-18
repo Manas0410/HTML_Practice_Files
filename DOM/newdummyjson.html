@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+      </head>
+      <body>
+        <div id="main-container"></div>
+      </body>
+    </html>
+    <script>
+      const mainElem = document.getElementById("main-container");
+      const temparr = [];
+      fetch("https://dummyjson.com/products")
+        .then((response) => response.json())
+        .then((data) => {
+          //   const prod = data;
+          //   for (let key in prod) {
+          //     if (prod.hasOwnProperty(key)) {
+          //       temparr.push(prod[key]);
+          //     }
+          //   }
+          const temparr = data.products;
+          console.log(data);
+
+          for (let i = 0; i < temparr.length; i++) {
+            const divElem = document.createElement("div");
+
+            const idElem = document.createElement("p");
+            idElem.innerText = temparr[i].id;
+
+            const titleElem = document.createElement("p");
+            titleElem.innerText = temparr[i].title;
+            const descripElem = document.createElement("p");
+            descripElem.innerText = temparr[i].description;
+            const pricElem = document.createElement("p");
+            pricElem.innerText = temparr[i].price;
+            const discountElem = document.createElement("p");
+            discountElem.innerText = temparr[i].discountPercentage;
+            const ratingElem = document.createElement("p");
+            ratingElem.innerText = temparr[i].rating;
+            const stockElem = document.createElement("p");
+            stockElem.innerText = temparr[i].stock;
+            const brandElem = document.createElement("p");
+            brandElem.innerText = temparr[i].brand;
+            const categoryElem = document.createElement("p");
+            categoryElem.innerText = temparr[i].category;
+            const thumbnailElem = document.createElement("img");
+            thumbnailElem.src = temparr[i].thumbnail;
+            const imagesElem = document.createElement("div");
+            const imagesElem1 = document.createElement("img");
+            imagesElem1.src = temparr[i].images[0];
+            const imagesElem2 = document.createElement("img");
+            imagesElem2.src = temparr[i].images[1];
+            const imagesElem3 = document.createElement("img");
+            imagesElem3.src = temparr[i].images[2];
+            const imagesElem4 = document.createElement("img");
+            imagesElem4.src = temparr[i].images[3];
+
+            imagesElem.appendChild(imagesElem1);
+            imagesElem.appendChild(imagesElem2);
+            imagesElem.appendChild(imagesElem3);
+            imagesElem.appendChild(imagesElem4);
+
+            divElem.appendChild(idElem);
+
+            divElem.appendChild(titleElem);
+            divElem.appendChild(descripElem);
+            divElem.appendChild(pricElem);
+            divElem.appendChild(discountElem);
+            divElem.appendChild(ratingElem);
+            divElem.appendChild(stockElem);
+            divElem.appendChild(brandElem);
+            divElem.appendChild(categoryElem);
+            divElem.appendChild(thumbnailElem);
+            divElem.appendChild(imagesElem);
+
+            mainElem.appendChild(divElem);
+          }
+        })
+
+        .catch((error) => {
+          console.error("Error fetching data: ", error);
+        });
+    </script>
+  </head>
+</html>

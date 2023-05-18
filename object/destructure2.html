@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const profile = {
+    name: "Reetika",
+    country: "USA",
+    //meraPadosi: "Ajit",
+  };
+
+  // Way 1
+  const uName = profile.name;
+  const uCountry = profile.country;
+  const uMeraPadosi = profile.meraPadosi || "NA";
+
+  // Way 2
+  const { name, country, meraPadosi = "Not available" } = profile;
+
+  console.log({
+    uName,
+    name,
+    uCountry,
+    uCountry,
+    country,
+    meraPadosi,
+    uMeraPadosi,
+  });
+</script>

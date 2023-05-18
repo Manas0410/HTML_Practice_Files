@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  var nAdd = (...rest) => {
+    let sum = 0;
+    for (let i = 0; i < rest.length; i++) {
+      let a = Number(rest[i]);
+      if (!isNaN(a)) {
+        sum = sum + a;
+      } else {
+        continue;
+      }
+    }
+
+    return sum;
+  };
+
+  console.log(nAdd(100, 490, "ankit", 50, null, 490, "30", 50, "", false));
+</script>

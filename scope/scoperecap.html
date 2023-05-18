@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  var a = 10; // Global Scope
+  let b = 20; // Script Scope
+  const c = 30; // Script Scope
+
+  function tryMe() {
+    var fa = 10; // local Scope
+    let fb = 20; // local Scope
+    const fc = 30; // local Scope
+  }
+
+  tryMe();
+
+  for (let i = 0; i < 3; i++) {
+    // Block
+    console.log({ i });
+  }
+
+  for (var j = 0; j < 3; j++) {
+    // Global
+    console.log({ j });
+  }
+
+  {
+    let a1 = 20; // BLock
+    var a2 = 40; // Global
+  }
+</script>

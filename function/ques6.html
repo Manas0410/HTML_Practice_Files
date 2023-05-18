@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const profile = {
+    userName: "Abhinav",
+    getName: function () {
+      console.log("1. This NF: ", this); // Profile
+
+      const myAF = () => {
+        console.log("2. This AF: ", this); // Profile
+
+        function four() {
+          console.log("3. This four: ", this); // Window
+        }
+
+        const five = () => {
+          console.log("4. This four: ", this); // Profile
+        };
+
+        four();
+        five();
+      };
+
+      function tryMe() {
+        console.log("5. This tryMe: ", this); // Window
+
+        const six = () => {
+          console.log("6. This tryMe: ", this); // Window
+        };
+
+        six();
+      }
+
+      tryMe();
+      myAF();
+      return true;
+    },
+  };
+
+  profile.getName();
+  var _getName = profile.getName;
+  //_getName();
+</script>

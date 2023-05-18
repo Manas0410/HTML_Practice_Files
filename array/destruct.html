@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+  // Traditional Approch
+  const firstElem = arr[0];
+  const secondElem = arr[1];
+
+  // ES6 Approach
+  const [meraPehlaElement, meraDusraElement] = arr;
+  console.log({ meraPehlaElement, meraDusraElement });
+
+  const [, , , fourthElem, fifthElem, sixthElem] = arr;
+
+  console.log({ fourthElem, fifthElem, sixthElem });
+
+  // Rest Operator usecase
+  const [pehla, dusra, ...bachaHua] = arr;
+
+  console.log({ pehla, dusra, bachaHua });
+</script>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .mobile,
+      .tablet,
+      .small-desktop,
+      .normal-desktop,
+      .big-desktop,
+      .projector {
+        display: none;
+        padding: 16px;
+      }
+
+      @media screen and (max-width: 480px) {
+        .mobile {
+          display: block;
+          background-color: red;
+        }
+      }
+
+      @media screen and (min-width: 481px) and (max-width: 768px) {
+        .tablet {
+          display: block;
+          background-color: rgb(255, 128, 0);
+        }
+      }
+
+      @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .small-desktop {
+          display: block;
+          background-color: rgb(255, 225, 0);
+        }
+      }
+
+      @media screen and (min-width: 1025px) and (max-width: 1200px) {
+        .normal-desktop {
+          display: block;
+          background-color: rgb(153, 255, 0);
+        }
+      }
+
+      @media screen and (min-width: 1201px) {
+        .big-desktop {
+          display: block;
+          background-color: rgb(153, 255, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="mobile">I'm Mobile</div>
+      <div class="tablet">I'm a Tablet</div>
+      <div class="small-desktop">I'm a Small Screen laptop</div>
+      <div class="normal-desktop">I'm a Normal Screen laptop</div>
+      <div class="big-desktop">I'm a Big Screen Desktop</div>
+    </div>
+  </body>
+</html>

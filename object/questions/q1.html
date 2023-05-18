@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const length = 4;
+  const numbers = [];
+  for (var i = 0; i < length; i++);
+  {
+    numbers.push(i + 1);
+  }
+
+  console.log(numbers); // => ???
+</script>
+<script>
+  const allStates = [
+    { isoCode: "IN", name: "India" },
+    { isoCode: "CA", name: "Canada" },
+  ];
+  const [{ isoCode: firstCode }] = allStates;
+  console.log(firstCode);
+</script>
+
+<script>
+  const profile = {};
+  const john = {
+    name: "john",
+  };
+
+  const bob = {
+    name: "bob",
+  };
+
+  profile.bob = "BOB";
+  profile.john = "JOHN";
+
+  profile[john] = john;
+  profile[bob] = bob;
+
+  // Keys - 2 - 4
+  // Final Answer -
+
+  console.log(profile);
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  var name = "Window";
+  const myObj = {
+    name: "Alice",
+    greeting: function () {
+      console.log(`Hello, my name is ${this.name}`);
+    },
+  };
+
+  const otherObj = {
+    name: "Bob",
+  };
+
+  myObj.greeting(); // Output: "Hello, my name is Alice"
+
+  const otherGreetingwithBind = myObj.greeting.bind(otherObj);
+  const otherGreetingWithoutBind = myObj.greeting;
+  otherGreetingwithBind(); // Output: "Hello, my name is Bob"
+  otherGreetingWithoutBind();
+</script>

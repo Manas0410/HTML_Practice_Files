@@ -1,0 +1,43 @@
+.main-box {
+    display: flex;
+}
+.image-card{
+    position: relative;
+}
+.image{
+    width: 270px;
+    height: 200px;
+    border: 1px solid silver;
+    border-radius: 8px;
+}
+.promoted{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #dfd7d7;
+    background-color: #a7a2a2;
+    border: 1px transparent;
+    border-radius: 3px;
+}
+.extra{
+    position: absolute;
+    left: 0;
+    background-color: #f74982;
+    bottom: 66px;
+}
+.off {
+    position: absolute;
+    background-color: #6798e3;
+    bottom: 38px;
+}
+.minute {
+    color: #dfd7d7;
+    background-color: #a7a2a2;
+    border-radius: 5px;
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+}
+a{
+    text-decoration: none;
+}

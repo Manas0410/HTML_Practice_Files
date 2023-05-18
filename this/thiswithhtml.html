@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p onclick="this.style.color='red'">Hello</p>
+    <p onclick="this.style.color='blue'">Hello</p>
+    <p onclick="this.style.color='green'">Hello</p>
+    <h1 onclick="this.style.color='olive'">Hello</h1>
+    <h1 id="heading">Hello</h1>
+  </body>
+</html>
+<script>
+  const heading = document.getElementById("heading");
+  heading.addEventListener("click", function () {
+    console.log("This: ", this);
+    this.style.color = "blue";
+    this.style.backgroundColor = "olive";
+    this.innerText = "Aadarsh";
+  });
+</script>

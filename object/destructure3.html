@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const profile = {
+    name: "Manas",
+    city: "Pune",
+    state: "MH",
+  };
+
+  // First way
+  /*const name = profile.name;
+  const city = profile.city;
+  const state = profile.state;
+  */
+
+  // Second Way
+  const { name, city, state } = profile;
+  const message = `Hello ${name}, how are you in ${city} ${state}`;
+  console.log(message);
+</script>

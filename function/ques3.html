@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const profile = {
+    userName: "Abhinav",
+    getName: function () {
+      console.log("This: ", this);
+      return `My name is ${this.userName}`;
+    },
+    getNameV2: () => {
+      console.log("This: ", this);
+      return `My name is ${this.userName}`;
+    },
+  };
+
+  console.log("Before", profile.getName());
+  const _getName = profile.getName;
+  console.log("After", _getName());
+</script>
+
+<script>
+  console.log("BeforeV2", profile.getNameV2());
+  const _getNameV2 = profile.getNameV2;
+  console.log("AfterV2", _getNameV2());
+</script>

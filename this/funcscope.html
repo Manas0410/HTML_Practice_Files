@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  var a = 200;
+  let b = 300;
+  const c = 400;
+
+  function tryMe() {
+    var a1 = 200;
+    let a2 = 300;
+    const a3 = 400;
+
+    console.log(a1, this.a1, a2, a3);
+
+    function myFunc() {
+      console.log("myFunc", this);
+
+      console.log(this);
+
+      function myInnerFunc() {
+        console.log("myInnerFunc", this);
+      }
+
+      const myInnerFuncArrow = () => {
+        console.log("myInnerFuncArrow", this);
+      };
+      myInnerFunc();
+      myInnerFuncArrow();
+    }
+
+    myFunc.call({ name: "sahil" });
+  }
+  tryMe();
+</script>

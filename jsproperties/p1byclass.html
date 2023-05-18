@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <div>
+          <p class="para">Hello Ankit 1</p>
+          <p class="para">Hello Ankit 2</p>
+          <p class="para" id="i-para">Hello Ankit 3</p>
+          <p class="para">Hello Ankit 4</p>
+          <p class="para">Hello Ankit 5</p>
+          <p class="para">Hello Ankit 6</p>
+          <button onclick="changeColor()">Change First element color</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function changeColor() {
+    const paraElements = document.getElementsByClassName("para");
+    for (let i = 0; i < paraElements.length; i++) {
+      if (paraElements[i].id !== "i-para") {
+        paraElements[i].innerText = "Hello Reetika";
+        paraElements[i].style.color = "red";
+      }
+    }
+
+    const iParaElem = document.getElementById("i-para");
+    iParaElem.innerText = "Hello Roopesh";
+  }
+</script>

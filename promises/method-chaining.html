@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let str = " aman ";
+  str = str.trim(); // aman
+  str = str.toUpperCase(); // AMAN
+
+  const methodChainOutput = str.trim().toUpperCase().split("");
+
+  console.log({ str, methodChainOutput });
+</script>
+
+<script>
+  const arr = [1, 2, 3, 4, 5, 10, 20];
+
+  // Map & multiple every element by 2
+  const mapResult = arr.map((data) => data * 2);
+  const filterResult = mapResult.filter((data) => data % 5 === 0);
+
+  // use method chaining
+  const mapAndFilterResult = arr
+    .map((data) => data * 2)
+    .filter((data) => data % 5 === 0);
+
+  console.log({ mapAndFilterResult });
+</script>

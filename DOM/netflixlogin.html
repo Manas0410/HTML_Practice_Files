@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .centre-login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="idcentre-login" class="centre-login"></div>
+  </body>
+</html>
+<script>
+  centreelem = document.getElementById("idcentre-login");
+
+  const sign = document.createElement("p");
+  sign.innerText = "Sign In";
+
+  const mail = document.createElement("input");
+  mail.type = Text;
+  mail.placeholder = "Email or Phone Number";
+
+  const pass = document.createElement("input");
+  pass.type = Text;
+  pass.placeholder = "Enter Password";
+
+  const button = document.createElement("button");
+  button.placeholder = "sign in";
+  button.innerText = "sign in";
+
+  centreelem.appendChild(sign);
+  centreelem.appendChild(mail);
+  centreelem.appendChild(pass);
+  centreelem.appendChild(button);
+</script>

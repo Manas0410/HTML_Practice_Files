@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function foo() {
+    let a;
+    window.b = 0;
+    a = window.b;
+    a++;
+    return a;
+  }
+  foo();
+  console.log("typeof a", typeof a);
+  console.log(a);
+
+  function tryMe() {
+    let test = 10;
+    b = 30;
+    return test;
+  }
+  tryMe();
+  console.log(b, this.b, window.b);
+</script>

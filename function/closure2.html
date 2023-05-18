@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  function outer() {
+    var a = 10;
+    letb = 20;
+    const c = 30;
+
+    function inner() {
+      let a1 = 20;
+      function innerV2() {
+        let a11 = 20;
+        function innerV3() {
+          console.log({ a, a1, a11 });
+        }
+        innerV3();
+      }
+      innerV2();
+    }
+
+    inner();
+  }
+
+  outer();
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // Way 1
+  let a = [1, 2, 3, 4, 5];
+  let b = a;
+
+  a.push(10);
+  b.push(20);
+  //a = [];
+
+  console.log({ a, b });
+</script>
+
+<script>
+  // Way 2
+  let a1 = [1, 2, 3, 4, 5];
+  let b1 = a1;
+
+  a1.splice(0);
+
+  console.log("Way2:", { a1, b1 });
+</script>
+
+<script>
+  // Way 3
+  let a2 = [1, 2, 3, 4, 5];
+  let b2 = a2;
+
+  a2.length = 0;
+
+  console.log({ a2, b2 });
+</script>
+
+<script></script>

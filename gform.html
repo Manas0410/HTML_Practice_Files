@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Account</title>
+    <style>
+        .email-block{
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            /* border: 1px solid silver; */
+            border:1px solid #ccc!important;
+            width: 358px;
+            border-radius: 4px;
+            padding: 4px;
+            color: #625d5d;
+            border-color: rgb(225 225 225);
+            height: 25px;
+        }
+        .input-box{
+            outline: none;
+            border: none;
+        }
+
+        .email-block-name{
+            display: flex;
+            justify-content: flex-end ;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Google</h1>
+    <h3>Create your Google Account
+    </h3>
+    <form action="">
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name"><br><br>
+        <div class="email-block">
+            <div class="email-block-input">
+                <input class="input-box" type="text" placeholder="Username"/>
+
+            </div>
+            <div class="email-block-name">
+                <span>@gmail.com</span>
+            </div>
+
+        </div>
+        <br><br>
+        <a href="">Use my current email address instead</a><br><br><br><br>
+        <input type="password" placeholder="Password">
+        <input type="password" placeholder="Confirm">
+        <p><i>Use 8 or more characters with a mix of letters, numbers & symbols</i></p>
+        <input type="checkbox" placeholder="show password">
+        <br><br><br><br>
+        <a href="" style="float: left">Sign in instead</a>
+        <input type="submit" value="Next" style="float: right;">
+    </form>
+</body>
+</html>

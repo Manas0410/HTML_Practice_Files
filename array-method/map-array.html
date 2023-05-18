@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const arr = [1, 2, 3, 4, 5, 6];
+
+  // Multiply every element by 2 & form a new array
+  const newTraditionalArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newTraditionalArr.push(arr[i] * 2);
+  }
+
+  console.log({ arr, newTraditionalArr });
+</script>
+
+<script>
+  // New way 1
+  const callbackFun = (data) => {
+    return data * 2;
+  };
+  const mappedArrayV1 = arr.map(callbackFun);
+
+  // New way 2
+  const mappedArrayV2 = arr.map((data) => {
+    return data * 2;
+  });
+
+  // New way 3
+  const mappedArrayV3 = arr.map((data) => data * 2);
+
+  console.log({ mappedArrayV1, mappedArrayV2, mappedArrayV3 });
+</script>

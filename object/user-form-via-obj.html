@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <div class="form-element">
+          <label for="firstName">First Name</label>
+          <input
+            onkeyup="handleInputChange(event)"
+            type="text"
+            placeholder="Enter first name"
+            name="firstName"
+            id="firstName"
+          />
+        </div>
+
+        <div class="form-element">
+          <label for="lastName">Last Name</label>
+          <input
+            onkeyup="handleInputChange(event)"
+            type="text"
+            placeholder="Enter last name"
+            name="lastName"
+            id="lastName"
+          />
+        </div>
+
+        <div class="form-element">
+          <label for="email">Email</label>
+          <input
+            onkeyup="handleInputChange(event)"
+            type="text"
+            placeholder="Enter email address"
+            name="email"
+            id="email"
+          />
+        </div>
+
+        <div class="form-element">
+          <label for="city">City</label>
+          <input
+            onkeyup="handleInputChange(event)"
+            type="text"
+            placeholder="Enter city"
+            name="city"
+            id="city"
+          />
+        </div>
+
+        <div class="form-element">
+          <button onclick="registerUser()">Create User</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  const user = {};
+  function registerUser() {
+    if (Object.keys(user).length === 0) {
+      return alert("Please enter valid data");
+    }
+  }
+
+  function handleInputChange(event) {
+    const { name, value } = event.target;
+    user[name] = value;
+  }
+</script>

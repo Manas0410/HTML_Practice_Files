@@ -1,0 +1,44 @@
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+  </body>
+</html>
+<script>
+  const containerElem = document.getElementById("container");
+
+  const h1 = document.createElement("h1");
+  h1.innerText = "Welcome to UI using createElement";
+
+  const h1V2 = document.createElement("h1");
+  h1V2.innerText = "Welcome to UI using createElement v2";
+
+  const h1V3 = document.createElement("h1");
+  h1V3.innerText = "Welcome to UI using createElement v3";
+
+  const div = document.createElement("div");
+  div.innerHTML =
+    "<div style='background-color:red; padding:12px; margin:12px;'><h2>Hello</h2></div>";
+
+  // It will update the data
+  containerElem.appendChild(h1);
+  containerElem.appendChild(h1V2);
+  containerElem.appendChild(h1V3);
+  containerElem.appendChild(div);
+
+  // It will override the data
+  /*  containerElem.innerHTML = "<h1>V1</h1>";
+  containerElem.innerHTML = "<h1>V2</h1>";
+  containerElem.innerHTML = "<h1>V3</h1>"; */
+</script>

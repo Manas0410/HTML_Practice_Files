@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const profilesV2 = [
+    { id: 1, name: "ArUn", city: "pUnE" },
+    { id: 2, name: "aNkIt", city: "morEna" },
+    { id: 3, name: "miteSh", city: "mUmbai" },
+    { id: 4, name: "vikAs", city: "bIhar" },
+  ];
+
+  const followers = [1, 2];
+
+  // Way 1
+  const LikesV1 = profilesV2.map((profile) => {
+    const isAfollower = followers.includes(profile.id);
+    profile.followerMessage = isAfollower ? "Following" : "Follow";
+    return profile;
+  });
+
+  // Way 2
+  const LikesV2 = profilesV2.map((profile) => {
+    const isAfollower = followers.some((follower) => profile.id === follower);
+    profile.followerMessage = isAfollower ? "Following" : "Follow";
+    return profile;
+  });
+
+  console.log({ LikesV1, LikesV2 });
+</script>

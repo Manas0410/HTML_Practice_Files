@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #products {
+        display: flex;
+        gap: 12px;
+      }
+      .product {
+        padding: 12px;
+        background-color: blue;
+        color: white;
+        height: 200px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="products"></div>
+  </body>
+</html>
+
+<script>
+  const products = [
+    {
+      id: 1,
+      name: "iPhone 14 Pro Max",
+      price: "165000",
+      company: "Apple",
+      details: {
+        key: "Manas",
+        key2: "Ankit 2",
+      },
+    },
+    {
+      id: 2,
+      name: "iPhone 13 Pro Max",
+      price: "145000",
+      details: {
+        key: "Manas 2",
+        key2: "Ankit 2",
+      },
+    },
+    {
+      id: 3,
+      name: "iPhone 12 Pro Max",
+      price: "125000",
+      details: {
+        key: "Manas 3",
+        key2: "Ankit 2",
+      },
+    },
+  ];
+
+  const productContainer = document.getElementById("products");
+  for (let i = 0; i < products.length; i++) {
+    const divElem = document.createElement("div");
+    divElem.className = "product";
+
+    const idElem = document.createElement("p");
+    idElem.innerText = products[i].id;
+
+    const nameElem = document.createElement("p");
+    nameElem.innerText = products[i].name;
+
+    const priceElem = document.createElement("p");
+    priceElem.innerText = products[i].price;
+
+    const companyElem = document.createElement("p");
+    companyElem.innerText = products[i].company || "Unknown";
+
+    const detailelem = document.createElement("p");
+    detailelem.innerText = products[i].details.key;
+
+    divElem.appendChild(idElem);
+    divElem.appendChild(nameElem);
+    divElem.appendChild(priceElem);
+    divElem.appendChild(companyElem);
+    divElem.appendChild(detailelem);
+
+    productContainer.appendChild(divElem);
+  }
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  const a = () => {
+    return new Promise((reply, reject) => {
+      setTimeout(() => {
+        reply("a");
+      }, 5000);
+    });
+  };
+  const b = () => {
+    return new Promise((reply, reject) => {
+      reply("b");
+    });
+  };
+  const c = () => {
+    return new Promise((reply, reject) => {
+      reply("c");
+    });
+  };
+  const d = () => {
+    return new Promise((reply, reject) => {
+      reply("d");
+    });
+  };
+
+  const runPromiseWithAnyRace = async () => {
+    try {
+      const results = await Promise.race([a(), b(), c(), d()]);
+      console.log(results);
+    } catch (err) {
+      console.log("Error", err);
+    }
+  };
+
+  runPromiseWithAnyRace();
+</script>

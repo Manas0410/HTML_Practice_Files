@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const p = () => {
+    return new Promise((resolve, reject) => {
+      resolve(10);
+    });
+  };
+
+  console.log("Start");
+  p()
+    .then((data) => {
+      console.log("Roopesh explained his idea to his madam");
+      console.log("Bhai, padh le or exam dele");
+      console.log("Master sahab is right, i'm giving up");
+      throw new Error("I'm giving up");
+    })
+    .then((data) => {
+      console.log("Roopesh explained his idea to his dad");
+      console.log("Karwau kya tujhe startup, with a flying chappan");
+      return "I'll do";
+    })
+    .then((data) => {
+      console.log("Roopesh explained his idea to his vikas");
+      console.log("hmm, idea me to dum hai tumhare, par tumse ho na payega");
+      return "I'll definately do";
+    })
+    .then((data) => {
+      console.log("Roopesh explained his idea to Ankit Bhai");
+      console.log("Sounds interesting, let's execute");
+      return "I'll definately do";
+    })
+    .then((data) => {
+      console.log("After 1 year");
+      console.log("He started seeing results");
+      return "I'll continue";
+    })
+    .then((data) => {
+      console.log("After 2 year");
+      console.log("He started seeing more results");
+      return "I'll continue";
+    })
+    .then((data) => {
+      console.log("After 3.5 year");
+      console.log("Formed a comapany with value offering to their partners");
+      return "I'll continue";
+    })
+    .catch((err) => {
+      console.log("Err4: ", err);
+    });
+
+  console.log("End");
+</script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @media print {
+        .hide-print {
+          display: none;
+        }
+      }
+
+      article {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.25rem;
+      }
+
+      body {
+        background-color: #af3b6e;
+        font-family: "Arial";
+      }
+
+      body,
+      html {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <p>
+        The <code>print</code> media type
+        <br />
+        Intended for paged material and documents viewed on a screen in print
+        preview mode. 📄
+      </p>
+
+      <p class="hide-print">You can hide me when printing 😄</p>
+    </article>
+  </body>
+</html>

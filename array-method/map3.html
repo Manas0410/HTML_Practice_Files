@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const profilesV2 = [
+    { id: 1, name: "ArUn", city: "pUnE", isFollowing: true },
+    { id: 2, name: "aNkIt", city: "morEna", isFollowing: true },
+    { id: 3, name: "miteSh", city: "mUmbai", isFollowing: false },
+    { id: 4, name: "vikAs", city: "bIhar", isFollowing: false },
+  ];
+
+  const followers = [1, 2];
+
+  const instaLikes = profilesV2.map((item) => {
+    if (item.isFollowing) {
+      item.followMessage = "Following";
+    } else {
+      item.followMessage = "Follow";
+    }
+
+    return item;
+  });
+  console.log({ instaLikes });
+</script>

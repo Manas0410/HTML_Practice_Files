@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  // this can access only var but not const or let
+
+  var a = 10;
+  var b = "Ajit";
+  let c = "Amit";
+  const d = "Rahul";
+
+  console.log(a, this.a, window.a);
+  console.log(b, this.b, window.b);
+  console.log(this.c);
+  console.log(d, this.d, window.d);
+</script>

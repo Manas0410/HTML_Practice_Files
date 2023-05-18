@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const obj = {};
+
+  // Get All Keys
+  console.log("Keys: ", Object.keys(obj), Object.keys(obj).length);
+
+  if (Object.keys(obj).length === 0) {
+    console.log("Empty");
+  } else {
+    console.log("Not empty");
+  }
+
+  const profile = { name: "Ajit", city: "Mumbai" };
+
+  // Get All Keys
+  console.log(
+    "profile Keys: ",
+    Object.keys(profile),
+    Object.keys(profile).length
+  );
+
+  // Get all values
+  console.log(Object.values(profile));
+
+  if (Object.keys(profile).length === 0) {
+    console.log("profile Empty");
+  } else {
+    console.log("profile Not empty");
+  }
+</script>
+
+<script>
+  fetch("https://jsonplaceholder.typicode.com/users/1")
+    .then((data) => data.json())
+    .then((data) => {
+      if (Object.keys(data).length !== 0) {
+        console.log("Yes It's a valid Data");
+      } else {
+        console.log("Seem's it's not a valid data");
+      }
+    });
+
+  fetch("https://jsonplaceholder.typicode.com/users/priyansh")
+    .then((data) => data.json())
+    .then((data) => {
+      if (Object.keys(data).length !== 0) {
+        console.log("Yes It's a valid Data");
+      } else {
+        console.log("Seem's it's not a valid data");
+      }
+    });
+</script>

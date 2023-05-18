@@ -1,0 +1,91 @@
+.img{
+    height: 188px;
+    width: 148px;
+    border-radius: 8px;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    background-color: #192133;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+body{
+    margin: 0;
+}
+.banner_photo:hover{
+    transition: transform .2s;
+    transform: scale(1.2);
+}
+a{
+    text-decoration: none;
+}
+.details {
+    position: absolute;
+    color: rgb(255, 255, 255);
+  
+    left: 0px;
+    right: 0px;
+    font-size: 10px;
+    bottom: 3px;
+    transition: all 0.3s ease;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(237, 237, 237, 0.5),
+      #4a556c
+    );
+    padding: 20px 5px 5px 5px;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 0 0 3px 3px;
+    transition: opacity 0.25s ease-in,
+      bottom 0.25s cubic-bezier(0.33, 0.04, 0.63, 0.93);
+  }
+  .movie-name {
+    font-weight: bold;
+    font-size: 12px;
+    padding-left: 3px;
+    margin-bottom: 3px;
+  }
+  .about-movie {
+    padding-left: 3px;
+    margin-bottom: 3px;
+  }
+  
+  .desc-ellipses {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 3px;
+    margin-bottom: 3px;
+  }
+  .watch-movie:hover,
+.add-to-watchlist:hover {
+  border: 1px solid transparent;
+  background-color: #4a556c;
+  border-radius: 5px;
+}
+
+
+  .banner_photo:hover .details {
+    visibility: visible;
+    opacity: 1;
+  }
+  .img:hover .details {
+    opacity: 1;
+  }
+  .watch-movie {
+    flex-direction: row;    
+    display: flex;
+    gap: 10px;        
+  }
+  .add-to-watchlist{
+    flex-direction: row;    
+    display: flex;
+    gap: 10px;
+  }
+  :root {
+    font-family: "Roboto", "HelveticaNeue-Light", sans-serif;
+  }

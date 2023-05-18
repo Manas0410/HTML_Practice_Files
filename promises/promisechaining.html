@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const p = () => {
+    return new Promise((resolve, reject) => {
+      resolve(10);
+    });
+  };
+
+  console.log("Start");
+  p()
+    .then((data) => {
+      console.log("First Then: ", data);
+      return data + 10;
+    })
+    .then((data) => {
+      console.log("Second Then: ", data);
+      return data * 2;
+    })
+    .then((data) => {
+      console.log("Third Then: ", data);
+      //return data + 2;
+    })
+    .then((data) => {
+      console.log("Final Then: ", data);
+    })
+    .catch((err) => {
+      console.log("Err: ", err);
+    });
+
+  console.log("End");
+</script>
